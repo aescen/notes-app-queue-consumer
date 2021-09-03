@@ -1,0 +1,32 @@
+{
+  "name": "notes-app-queue-consumer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/consumer.js",
+  "scripts": {
+    "start": "npm run start-prod",
+    "start-prod": "node ./src/consumer.js",
+    "start-dev": "nodemon ./src/consumer.js",
+    "web": "node --optimize_for_size --max_old_space_size=448 --gc_interval=100 ./src/consumer.js",
+    "lint": "eslint ./src",
+    "migrate": "node-pg-migrate"
+  },
+  "keywords": [],
+  "author": "Aesce",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "dotenv": "^10.0.0",
+    "nodemailer": "^6.6.3",
+    "pg": "^8.7.1"
+  },
+  "engines": {
+    "node": ">=14.x"
+  }
+}
